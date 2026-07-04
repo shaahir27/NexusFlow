@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
 
   // Configure axios defaults
   const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://nexusflow-9ksp.onrender.com/api',
   });
 
   useEffect(() => {
