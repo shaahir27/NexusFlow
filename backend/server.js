@@ -23,6 +23,11 @@ app.get('/', (req, res) => {
   res.send('Task Tracker API is running...');
 });
 
+// Health check route for Render
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Server is healthy' });
+});
+
 // Database Connection
 mongoose
   .connect(process.env.MONGODB_URI)
